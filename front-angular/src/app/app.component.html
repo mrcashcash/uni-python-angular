@@ -1,0 +1,33 @@
+<main class="page-container">
+  <div class="card">
+    <h1 class="title">System Status Dashboard</h1>
+
+    <div class="status-list">
+      <!-- API Server Status -->
+      <div class="status-item">
+        <span class="label">API Server</span>
+        <span class="badge" [ngClass]="isApiUp ? 'badge-success' : 'badge-error'">
+          {{ isApiUp ? 'ONLINE' : 'OFFLINE' }}
+        </span>
+      </div>
+
+      <!-- Database Status -->
+      <div class="status-item">
+        <span class="label">Database</span>
+        <span class="badge" [ngClass]="isDbConnected ? 'badge-success' : 'badge-error'">
+          {{ isDbConnected ? 'CONNECTED' : 'DISCONNECTED' }}
+        </span>
+      </div>
+    </div>
+
+    <div class="endpoint-info">
+      Checking endpoint: <span>{{ healthEndpoint }}</span>
+    </div>
+
+    <div class="json-container">
+      <p>RAW API RESPONSE:</p>
+      <pre>{{ apiResponse | json }}</pre>
+    </div>
+    
+  </div>
+</main>
