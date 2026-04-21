@@ -66,6 +66,16 @@
   color: #b91c1c;
 }
 
+.badge-warning {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.badge-neutral {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
 .endpoint-info {
   margin-top: 1.5rem;
   text-align: center;
